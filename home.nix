@@ -1,3 +1,4 @@
+
 { config, pkgs, ... }:
 
 {
@@ -17,16 +18,32 @@
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
-  home.packages = [
+  home.packages = with pkgs; [
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
     # # fonts?
     # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-    pkgs.btop
-    pkgs.spotify-player
+    htop
+    btop
+    bat
+    vim
+    neovim
+    wget
+    git
+    kitty
+    librewolf
+    vencord
+    spotify
+    spotify-player
+    waybar
+    rofi
+    xfce.thunar
+    wal
   ];
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
