@@ -17,6 +17,9 @@
   # NTFS support
   boot.supportedFilesystems = [ "ntfs" ];
 
+  # Linux kernel
+  boot.kernelPackages = pkgs.linuxPackages_zen;
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 

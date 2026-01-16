@@ -47,6 +47,7 @@
     caffeine-ng
     spotify-player
     docker
+    gemini-cli
 
     kitty
     vim
