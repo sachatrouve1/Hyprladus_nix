@@ -1,2 +1,2 @@
 # Hyprladus_nix
-My Hyprland rice
+My NixOS configuration
