@@ -52,7 +52,6 @@
     kitty
     vim
     neovim
-    vscode
 
     librewolf
     vesktop
@@ -62,7 +61,6 @@
     kdePackages.kruler
     jetbrains-toolbox
     thunar
-    thunar-vcs-plugin
     libreoffice-still
 
     waybar

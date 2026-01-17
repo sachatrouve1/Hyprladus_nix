@@ -90,18 +90,7 @@
      polkit
      blueman
      thinkfan
-     greetd
   ];
-
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --cmd start-hyprland";
-        user = "greeter";
-      };
-    };
-  };
   
   programs.hyprland.enable = true;
 
@@ -114,6 +103,10 @@
     pulse.enable = true;
     # jack.enable = true; # for JACK applications
   };
+
+  services.playerctld.enable = true;
+  services.dbus.enable = true;
+  services.tumbler.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

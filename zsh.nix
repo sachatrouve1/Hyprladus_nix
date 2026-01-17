@@ -35,10 +35,7 @@
     # .zshrc
     initContent = ''
       # pywal
-      (cat ~/.cache/wal/sequences &)
-
-      # emacs mode
-      bindkey -e
+      # (cat ~/.cache/wal/sequences &)
 
       # Configuration of powerlevel10k
       source ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
@@ -55,9 +52,6 @@
     '';
 
     shellAliases = {
-      vim = "nvim";
-      ls = "lsd";
-      ll = "lsd -l";
       update = "sudo nixos-rebuild-secure switch --flake ~/nixos-config/ --impure";
       clean = "sudo nix-collect-garbage -d";
       dockerclean = "sudo docker system prune -a";
@@ -65,7 +59,23 @@
       vpniut = "sudo openfortivpn u-vpn-plus.unilim.fr --saml-login";
       bdd = "nvim +':DBUI' ";
       avante = "nvim -c 'lua vim.defer_fn(function()require(\"avante.api\").zen_mode()end, 100)'";
-      e = "emacsclient -nw -c -a 'emacs'";
+      ls = "eza -1 --icons=auto";
+      c = "clear";
+      l = "eza -lh --icons=auto";
+      ll = "eza -lha --icons=auto --sort=name --group-directories-first";
+      ld = "eza -lhD --icons=auto";
+      lt = "eza --icons=auto --tree";
+      ".." = "cd ..";
+      "..." = "cd ../..";
+      ".3" = "cd ../../..";
+      ".4" = "cd ../../../..";
+      ".5" = "cd ../../../../..";
+      mkdir = "mkdir -p";
+      search = "sudo find . -iname ";
+      searchin = "sudo grep -rnw . -e ";
+      setwallpaper = "/set_wallpaper.s";
+      startweb = "sudo systemctl start httpd && systemctl status httpd && sudo systemctl start mariadb && systemctl status mariadb";
+      rmnot = "sudo ~/rmnot.sh";
     };
   };
 
