@@ -7,6 +7,7 @@
     home-modules/zsh.nix
     home-modules/lazyvim/lazyvim.nix
     home-modules/vscode/vscode.nix
+    home-modules/git.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -64,13 +65,14 @@
     feh
     kdePackages.okular
     kdePackages.kruler
-    jetbrains-toolbox
+    jetbrains.idea
     libreoffice-still
     mongodb-compass
 
     waybar
     rofi
     pywal
+    pywalfox-native
     grim
     slurp
     wl-clipboard

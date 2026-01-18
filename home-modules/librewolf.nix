@@ -84,6 +84,12 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
           installation_mode = "force_installed";
         };
+
+        # Netflix household no more
+        "{netflix-household-no-more@yourdomain.com}" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/vimium-ff/latest.xpi";
+          installation_mode = "force_installed";
+        };
       };
       # ---- PREFERENCES ----
       # Check about:config for options.

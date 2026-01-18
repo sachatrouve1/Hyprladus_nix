@@ -40,13 +40,13 @@
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
-      vim-monokai-pro
     ];
 
     extraLuaConfig =
       let
         plugins = with pkgs.vimPlugins; [
           # LazyVim
+          monokai-pro-nvim
           LazyVim
           bufferline-nvim
           cmp-buffer

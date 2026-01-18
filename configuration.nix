@@ -14,6 +14,7 @@
       modules/thunar.nix
       modules/gaming.nix
       modules/battery.nix
+      modules/thinkfan.nix
     ];
 
   # Bootloader.
@@ -36,7 +37,7 @@
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+  # networking.proxy.noProxy =ça  "127.0.0.1,localhost,internal.domain";
 
   # Enable networking
   networking.networkmanager.enable = true;
@@ -118,8 +119,7 @@
   services.playerctld.enable = true;
   services.dbus.enable = true;
   services.tumbler.enable = true;
-  services.thinkfan.enable = true;
-  services.udiskie.enable = true;
+  services.udisks2.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
