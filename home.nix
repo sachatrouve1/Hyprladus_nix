@@ -57,6 +57,8 @@
     unzip
     gemini-cli
     gk-cli
+    kitty
+    vim
 
     gcc
     rustup
@@ -85,9 +87,7 @@
     copilot-language-server
     aider-chat-full
 
-    kitty
-    vim
-
+    firefox
     vesktop
     discord
     spotify
