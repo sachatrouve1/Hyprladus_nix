@@ -58,6 +58,33 @@
     gemini-cli
     gk-cli
 
+    gcc
+    rustup
+    cmake
+    rustlings
+    maven
+    nodejs
+    tree-sitter
+    vscode-langservers-extracted
+    twig-language-server
+    nixd
+    nixfmt
+    alejandra
+    jdt-language-server
+    vue-language-server
+    prettier
+    clang-tools
+    live-server
+    sqlcmd
+    gnumake
+    python313
+    python313Packages.pip
+    luarocks
+    libtool
+    ispell
+    copilot-language-server
+    aider-chat-full
+
     kitty
     vim
 

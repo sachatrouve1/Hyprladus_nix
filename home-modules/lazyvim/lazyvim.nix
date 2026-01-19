@@ -10,32 +10,6 @@
       stylua
       # Telescope
       ripgrep
-      gcc
-      rustup
-      nodejs
-      tree-sitter
-      vscode-langservers-extracted
-      twig-language-server
-      nixd
-      nixfmt
-      alejandra
-      jdt-language-server
-      vue-language-server
-      prettier
-      clang-tools
-      rustlings
-      maven
-      live-server
-      sqlcmd
-      gnumake
-      python313
-      python313Packages.pip
-      luarocks
-      cmake
-      libtool
-      ispell
-      copilot-language-server
-      aider-chat-full
     ];
 
     plugins = with pkgs.vimPlugins; [
@@ -46,7 +20,6 @@
       let
         plugins = with pkgs.vimPlugins; [
           # LazyVim
-          { name = "monokai-pro.nvim"; path = monokai-pro-nvim; }
           LazyVim
           bufferline-nvim
           cmp-buffer
@@ -95,6 +68,7 @@
           { name = "mini.indentscope"; path = mini-nvim; }
           { name = "mini.pairs"; path = mini-nvim; }
           { name = "mini.surround"; path = mini-nvim; }
+          { name = "monokai-pro.nvim"; path = monokai-pro-nvim; }
         ];
         mkEntryFromDrv = drv:
           if lib.isDerivation drv then
