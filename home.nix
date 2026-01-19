@@ -97,6 +97,9 @@
     jetbrains.idea
     libreoffice-still
     mongodb-compass
+    prismlauncher
+    android-studio
+    android-studio-tools
 
     waybar
     rofi

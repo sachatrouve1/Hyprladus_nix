@@ -15,6 +15,7 @@
       modules/gaming.nix
       modules/battery.nix
       modules/thinkfan.nix
+      modules/docker.nix
     ];
 
   # Bootloader.
