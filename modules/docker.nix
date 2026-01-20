@@ -4,7 +4,7 @@
   lib,
   ...
 }: {
-  users.users.fellwin.extraGroups = [
+  users.users.sacha.extraGroups = [
     "docker"
   ];
   virtualisation.docker.enable = true;

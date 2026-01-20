@@ -59,6 +59,9 @@
     gk-cli
     kitty
     vim
+    proton-vpn-cli
+    python314Packages.proton-vpn-daemon
+    gnome-keyring
 
     gcc
     rustup
