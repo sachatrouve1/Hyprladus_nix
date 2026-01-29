@@ -5,8 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [
+  imports = [
       ./hardware-configuration.nix
       modules/bluetooth.nix
       modules/greetd.nix
@@ -17,7 +16,15 @@
       modules/thinkfan.nix
       modules/docker.nix
       modules/virtualbox.nix
+      modules/prismlauncher.nix
+      modules/wine.nix
+      modules/audio.nix
+      modules/services.nix
     ];
+
+  nixpkgs.overlays = [
+    (import ./overlays/bitwig_studio5/bitwig5.nix)
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -27,7 +34,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Linux kernel
-  boot.kernelPackages = pkgs.linuxPackages_zen;
+  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
   
   # Shell
   environment.shells = with pkgs; [ zsh ];
@@ -110,22 +117,6 @@
   ];
   
   programs.hyprland.enable = true;
-
-  # Pipewire configuration
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # jack.enable = true; # for JACK applications
-  };
-
-  services.playerctld.enable = true;
-  services.dbus.enable = true;
-  services.tumbler.enable = true;
-  services.udisks2.enable = true;
-  services.throttled.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

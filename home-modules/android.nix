@@ -22,7 +22,6 @@ in
     android-studio
     android.androidsdk
     android-tools   # adb, fastboot
-    jdk17
   ];
 
   ############################

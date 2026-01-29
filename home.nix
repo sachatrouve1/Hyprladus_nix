@@ -56,13 +56,18 @@
     docker
     zip
     unzip
+    unrar
     gemini-cli
     gk-cli
     kitty
     vim
     proton-vpn-cli
+    protonvpn-gui
     python314Packages.proton-vpn-daemon
+    python314Packages.proton-keyring-linux
     gnome-keyring
+    difftastic
+    speedcrunch
 
     gcc
     rustup
@@ -91,6 +96,7 @@
     copilot-language-server
     aider-chat-full
     graphviz
+    jdk17
 
     firefox
     vesktop
@@ -102,8 +108,10 @@
     jetbrains.idea
     libreoffice-still
     mongodb-compass
-    prismlauncher
     qbittorrent
+    pinta
+    ryubing
+    bitwig-studio
 
     waybar
     rofi
@@ -146,6 +154,7 @@
     hyprlock
     hypridle
     hyprsunset
+    hyprshade
     hyprcursor
     hyprlang
     hyprgraphics

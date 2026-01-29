@@ -16,6 +16,7 @@
         github.copilot
         leonardssh.vscord
         bbenoist.nix 
+        rust-lang.rust-analyzer
 
         # Extensions for web devlopment
         # General
