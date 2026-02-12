@@ -14,7 +14,7 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
     open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+    package = config.boot.kernelPackages.nvidiaPackages.latest;
 
     prime = {
       offload = {
@@ -26,8 +26,8 @@
     };
   };
 
-  # # Luminosity for external display:
-  # hardware.i2c.enable = true;
-  #
-  # users.users.sacha.extraGroups = [ "i2c" ];
+  # Luminosity for external display:
+  hardware.i2c.enable = true;
+
+  users.users.sacha.extraGroups = [ "i2c" ];
 }
