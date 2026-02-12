@@ -15,16 +15,12 @@
       modules/battery.nix
       modules/thinkfan.nix
       modules/docker.nix
-      modules/virtualbox.nix
+      # modules/virtualbox.nix
       modules/prismlauncher.nix
       modules/wine.nix
       modules/audio.nix
       modules/services.nix
     ];
-
-  nixpkgs.overlays = [
-    (import ./overlays/bitwig_studio5/bitwig5.nix)
-  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -34,7 +30,7 @@
   boot.supportedFilesystems = [ "ntfs" ];
 
   # Linux kernel
-  boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest-lto;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   
   # Shell
   environment.shells = with pkgs; [ zsh ];

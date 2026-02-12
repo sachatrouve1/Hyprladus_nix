@@ -58,7 +58,6 @@
     unzip
     unrar
     gemini-cli
-    gk-cli
     kitty
     vim
     proton-vpn-cli
@@ -68,6 +67,7 @@
     gnome-keyring
     difftastic
     speedcrunch
+    nmap
 
     gcc
     rustup
@@ -111,7 +111,9 @@
     qbittorrent
     pinta
     ryubing
-    bitwig-studio
+    lmms
+    superTuxKart
+    gimp
 
     waybar
     rofi
