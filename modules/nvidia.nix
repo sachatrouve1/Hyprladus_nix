@@ -14,7 +14,7 @@
     # accessible via `nvidia-settings`.
     nvidiaSettings = true;
     open = false;
-    package = config.boot.kernelPackages.nvidiaPackages.latest;
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
 
     prime = {
       offload = {

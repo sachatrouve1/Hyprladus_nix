@@ -1,29 +1,13 @@
 { pkgs, config, ... }:
 {
   environment.systemPackages = with pkgs; [
-    # ...
+    # Standard Wine installation supporting both 32-bit and 64-bit applications
+    wineWow64Packages.stable
 
-    # support both 32-bit and 64-bit applications
-    wineWowPackages.stable
-
-    # support 32-bit only
-    wine
-
-    # support 64-bit only
-    (wine.override { wineBuild = "wine64"; })
-
-    # support 64-bit only
-    wine64
-
-    # wine-staging (version with experimental features)
-    wineWowPackages.staging
-
-    # winetricks (all versions)
+    # Winetricks for installing common Windows components
     winetricks
 
-    # native wayland support (unstable)
-    wineWowPackages.waylandFull
-
+    # Bottles for GUI management of Wine prefixes (optional - remove if not needed)
     bottles
   ];
 }

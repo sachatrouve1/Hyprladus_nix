@@ -49,15 +49,13 @@
     cava
     udiskie
     tree
-    eza
-    pavucontrol
+    eza pavucontrol
     caffeine-ng
     spotify-player
     docker
     zip
     unzip
     unrar
-    gemini-cli
     kitty
     vim
     proton-vpn-cli
@@ -68,6 +66,8 @@
     difftastic
     speedcrunch
     nmap
+    qwen-code
+    lazygit
 
     gcc
     rustup
@@ -114,6 +114,7 @@
     lmms
     superTuxKart
     gimp
+    element-desktop
 
     waybar
     rofi
