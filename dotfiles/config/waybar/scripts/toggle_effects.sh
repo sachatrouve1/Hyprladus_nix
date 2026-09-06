@@ -12,17 +12,9 @@ fi
 
 # Toggle state
 if [[ "$STATE" == "on" ]]; then
-    if ! hyprctl eval "hl.config({ animations = { enabled = false }, decoration = { blur = { enabled = false }, rounding = 0 } })" >/dev/null 2>&1; then
-        hyprctl keyword animations:enabled false
-        hyprctl keyword decoration:blur:enabled false
-        hyprctl keyword decoration:rounding 0
-    fi
+    hyprctl eval "hl.config({ animations = { enabled = false }, decoration = { blur = { enabled = false }, rounding = 0 } })"
     echo -n "off" >"$STATE_FILE"
 else
-    if ! hyprctl eval "hl.config({ animations = { enabled = true }, decoration = { blur = { enabled = true }, rounding = 20 } })" >/dev/null 2>&1; then
-        hyprctl keyword animations:enabled true
-        hyprctl keyword decoration:blur:enabled true
-        hyprctl keyword decoration:rounding 20
-    fi
+    hyprctl eval "hl.config({ animations = { enabled = true }, decoration = { blur = { enabled = true }, rounding = 20 } })"
     echo -n "on" >"$STATE_FILE"
 fi

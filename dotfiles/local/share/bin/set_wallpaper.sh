@@ -26,4 +26,3 @@ nohup waybar >/dev/null 2>&1 &
 echo "Waybar reloaded."
 pkill -9 swaync && swaync & disown
 echo "swaync notification reloaded."
-

@@ -7,6 +7,7 @@ local term = "foot"
 local editor = "code"
 local file = "nemo"
 local browser = "librewolf"
+local lockscreen = "hyprlock"
 
 -- Window / Session actions
 hl.bind("SUPER + Q", hl.dsp.exec_cmd(scrPath .. "/dontkillsteam.sh"), { repeating = true })
@@ -15,7 +16,7 @@ hl.bind("ALT + F4", hl.dsp.window.close())
 hl.bind("SUPER + ALT + Delete", hl.dsp.exit())
 hl.bind("SUPER + W", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + G", hl.dsp.group.toggle())
-hl.bind("SUPER + Delete", hl.dsp.exec_cmd("pidof hyprlock || hyprlock"))
+hl.bind("SUPER + Delete", hl.dsp.exec_cmd(lockscreen))
 hl.bind("SUPER + SHIFT + F", hl.dsp.exec_cmd(scrPath .. "/windowpin.sh"))
 hl.bind("SUPER + Backspace", hl.dsp.exec_cmd(scrPath .. "/wlogout.sh"))
 hl.bind("CTRL + ALT + W", hl.dsp.exec_cmd("pkill -9 waybar || waybar"))
@@ -30,7 +31,6 @@ hl.bind("SUPER + F", hl.dsp.exec_cmd(browser))
 hl.bind("CTRL + SHIFT + Escape", hl.dsp.exec_cmd(term .. " -e btop"))
 hl.bind("SUPER + D", hl.dsp.exec_cmd("vesktop"))
 hl.bind("SUPER + M", hl.dsp.exec_cmd("spotify"))
-hl.bind("SUPER + S", hl.dsp.exec_cmd("steam"))
 hl.bind("CTRL + Escape", hl.dsp.exec_cmd("hyprpicker -a -f rgb &"))
 hl.bind("CTRL + code:49", hl.dsp.exec_cmd("kruler"))
 
