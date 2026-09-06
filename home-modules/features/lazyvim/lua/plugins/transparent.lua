@@ -1,5 +1,4 @@
 return {
-	-- 1. Plugin Transparent principal + styles généraux & Dashboard
 	{
 		"xiyaowong/transparent.nvim",
 		lazy = false,
@@ -115,9 +114,6 @@ return {
 			opts.options = opts.options or {}
 			opts.options.theme = opts.options.theme or "auto"
 			-- On surcharge la section neutre de fond pour retirer toute couleur opaque
-			if type(opts.options.theme) == "string" then
-				-- Neovim force le fond vide si le thème est chargé dynamiquement
-			end
 		end,
 	},
 
