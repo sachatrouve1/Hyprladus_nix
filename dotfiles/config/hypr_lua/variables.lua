@@ -40,7 +40,7 @@ hl.config({
 		kb_variant = "oss,",
 		kb_options = "lv3:ralt_switch",
 		accel_profile = "adaptive",
-		force_no_accel = 0,
+		force_no_accel = false,
 		sensitivity = 0.3,
 		numlock_by_default = true,
 

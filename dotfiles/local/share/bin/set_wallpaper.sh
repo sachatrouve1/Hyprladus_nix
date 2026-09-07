@@ -8,16 +8,16 @@ fi
 wallpaper=$1
 
 cp $wallpaper ~/.cache/wallpaper.png
-awww img $wallpaper
+awww img -t 'grow' $wallpaper
 echo "Wallpaper $wallpaper applied."
-wal -i $wallpaper
+wal -n -i $wallpaper
 echo "Theme applied."
 ~/.config/wal/hooks/bordercolor.sh
 echo "Windows border color added."
 ~/.config/wal/hooks/cava.sh
 echo "Cava theme applied."
-pywalfox update
-echo "Firefox theme updated."
+# pywalfox update
+# echo "Firefox theme updated."
 # pywal-spicetify Default
 # echo "Sptotify theme updated."
 # pkill waybar 2>/dev/null || true

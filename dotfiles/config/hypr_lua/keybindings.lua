@@ -35,7 +35,7 @@ hl.bind("CTRL + Escape", hl.dsp.exec_cmd("hyprpicker -a -f rgb &"))
 hl.bind("CTRL + code:49", hl.dsp.exec_cmd("kruler"))
 
 -- menus
-hl.bind("SUPER + A", hl.dsp.exec_cmd("wofi --show drun"))
+hl.bind("SUPER + A", hl.dsp.exec_cmd("pkill wofi || wofi --show drun"))
 hl.bind("SUPER + V", hl.dsp.exec_cmd(scrPath .. "/clipManager.sh"))
 
 -- Notifications
