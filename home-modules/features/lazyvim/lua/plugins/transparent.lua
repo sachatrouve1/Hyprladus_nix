@@ -1,4 +1,5 @@
 return {
+	-- 1. Plugin Transparent principal + styles généraux
 	{
 		"xiyaowong/transparent.nvim",
 		lazy = false,
@@ -22,16 +23,15 @@ return {
 					"AlphaFooter",
 					"AlphaShortcut",
 
-					-- Bande du haut (Bufferline / Onglets / TabLine)
+					-- Barre du haut (Bufferline / Tabs)
 					"TabLine",
 					"TabLineFill",
 					"TabLineSel",
 					"BufferLineFill",
 					"BufferLineBackground",
 					"BufferLineSeparator",
-					"BufferLineIndicatorSelected",
 
-					-- Bande du bas (Lualine / StatusLine)
+					-- Barre du bas (Neovim natif)
 					"StatusLine",
 					"StatusLineNC",
 
@@ -54,7 +54,7 @@ return {
 					"SnacksNormal",
 					"SnacksBackdrop",
 
-					-- Cmdline & Fenêtres flottantes
+					-- Cmdline & Flottants
 					"NoiceCmdline",
 					"NoiceCmdlinePopup",
 					"NoiceCmdlinePopupBorder",
@@ -69,7 +69,7 @@ return {
 					vim.api.nvim_set_hl(0, group, { bg = "NONE" })
 				end
 
-				-- Texte doux pour l'explorateur
+				-- Texte adouci pour l'explorateur
 				local muted_text = "#a9b1d6"
 				local tree_guides = "#565f89"
 				vim.api.nvim_set_hl(0, "SnacksPickerFile", { fg = muted_text, bg = "NONE" })
@@ -107,17 +107,33 @@ return {
 		end,
 	},
 
-	-- 2. Transparence du fond de Lualine (bande du bas)
+	-- 2. Rendre Lualine (barre du bas) transparente
 	{
 		"nvim-lualine/lualine.nvim",
 		opts = function(_, opts)
+			-- Récupère le thème courant ou utilise "auto"
+			local theme_name = opts.options and opts.options.theme or "auto"
+			local ok, theme =
+				pcall(require, "lualine.themes." .. (type(theme_name) == "string" and theme_name or "auto"))
+
+			if not ok then
+				theme = require("lualine.themes.auto")
+			end
+
+			-- Met à NONE l'arrière-plan de la zone centrale (c) pour tous les modes
+			local modes = { "normal", "insert", "visual", "replace", "command", "inactive", "terminal" }
+			for _, mode in ipairs(modes) do
+				if theme[mode] and theme[mode].c then
+					theme[mode].c.bg = "NONE"
+				end
+			end
+
 			opts.options = opts.options or {}
-			opts.options.theme = opts.options.theme or "auto"
-			-- On surcharge la section neutre de fond pour retirer toute couleur opaque
+			opts.options.theme = theme
 		end,
 	},
 
-	-- 3. Transparence de Bufferline (bande du haut)
+	-- 3. Transparence Bufferline (bande du haut)
 	{
 		"akinsho/bufferline.nvim",
 		opts = {
